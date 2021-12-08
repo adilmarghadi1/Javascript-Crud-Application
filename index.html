@@ -9,7 +9,7 @@
   </head>
   <body>
     <main class='container'>
-        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+        <form onsubmit="event.preventDefault();" autocomplete="off">
         <div class="input1">
         <label id="first">Titre
          <input type='text' name='titre' id='titre' placeholder='titre' required maxlength="30" />
@@ -53,7 +53,7 @@
       
           
           <div class="buttons">
-            <button type="submit" id='submit1'>Submit</button> 
+            <button onclick="onFormSubmit()">Submit</button> 
           </div></form>
           <br><br><br>
           

@@ -1,5 +1,5 @@
 var selectedRow = null
-document.onclick(function onFormSubmit() {
+function onFormSubmit() {
 
     if (validate()) {
         var formData = readFormData();
@@ -9,7 +9,7 @@ document.onclick(function onFormSubmit() {
             updateRecord(formData);
         resetForm();
     }
-})
+}
     
      
 
@@ -139,5 +139,3 @@ function validate() {
     }
     return isValid;
 } 
-let submit1 = document.getElementsById('submit1')
-submit1.addEventListener("click", onFormSubmit())
