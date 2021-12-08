@@ -139,5 +139,5 @@ function validate() {
     }
     return isValid;
 } 
-
+let submit1 = document.getElementsById('submit1')
 submit1.addEventListener("click", onFormSubmit())
