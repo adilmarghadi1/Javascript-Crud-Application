@@ -1,5 +1,7 @@
 var selectedRow = null
-function onFormSubmit() {
+const  submit1 = document.getElementById("submit1")
+submit1.addEventListener("click", function onFormSubmit() {
+
     if (validate()) {
         var formData = readFormData();
         if (selectedRow == null)
@@ -8,9 +10,11 @@ function onFormSubmit() {
             updateRecord(formData);
         resetForm();
     }
+})
     
      
-}
+
+
 
 
 const titre = document.getElementById("titre")
@@ -113,7 +117,7 @@ function updateRecord(formData) {
     selectedRow.cells[2].innerHTML = formData.prix;
     selectedRow.cells[3].innerHTML = formData.langue;
     selectedRow.cells[4].innerHTML = formData.roman;
-    selectedRow.cells[4].innerHTML = formData.date;
+    selectedRow.cells[5].innerHTML = formData.date;
  
 }
 
@@ -136,3 +140,5 @@ function validate() {
     }
     return isValid;
 } 
+
+submit1.addEventListener("click", onFormSubmit())
