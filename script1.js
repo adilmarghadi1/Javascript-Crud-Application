@@ -22,6 +22,7 @@ function readFormData() {
     formData["auteur"] = document.getElementById("auteur").value;
     formData["prix"] = document.getElementById("prix").value;
     formData["langue"] = document.getElementById("langue").value;
+    formData["date"] = document.getElementById("date").value;
     
    
 
@@ -79,9 +80,10 @@ function insertNewRecord(data) {
     cell4.innerHTML = data.langue;
     cell5 = newRow.insertCell(4);
   cell5.innerHTML = data.roman;
-  
-    cell4 = newRow.insertCell(5);
-    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+  cell6 = newRow.insertCell(5);
+  cell6.innerHTML = data.date;
+    cell7 = newRow.insertCell(6);
+    cell7.innerHTML = `<a onClick="onEdit(this)">Edit</a>
                        <a onClick="onDelete(this)">Delete</a>`;
 }
 
@@ -91,6 +93,7 @@ function resetForm() {
     document.getElementById("prix").value = "";
     document.getElementById("langue").value = "";
     document.getElementById("roman").value = "";
+    document.getElementById("date").value = "";
  
     selectedRow = null;
 }
@@ -102,7 +105,7 @@ function onEdit(td) {
     document.getElementById("prix").value = selectedRow.cells[2].innerHTML;
     document.getElementById("langue").value = selectedRow.cells[3].innerHTML;
     document.getElementById("roman").value = selectedRow.cells[4].innerHTML;
- 
+    document.getElementById("date").value = selectedRow.cells[5].innerHTML;
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.titre;
@@ -110,6 +113,7 @@ function updateRecord(formData) {
     selectedRow.cells[2].innerHTML = formData.prix;
     selectedRow.cells[3].innerHTML = formData.langue;
     selectedRow.cells[4].innerHTML = formData.roman;
+    selectedRow.cells[4].innerHTML = formData.date;
  
 }
 
