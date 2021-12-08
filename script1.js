@@ -1,5 +1,5 @@
 var selectedRow = null
-function onFormSubmit() {
+document.addEventListener("click", function onFormSubmit() {
 
     if (validate()) {
         var formData = readFormData();
