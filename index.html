@@ -7,7 +7,7 @@
   </head>
   <body>
     <main class='container'>
-      <form onsubmit="event.preventDefault();onFormSubmit();" class="form">
+      <form onsubmit="event.preventDefault();" class="form">
         <div class="input1">
         <label id="first">Titre
          <input type='text' name='titre' id='titre' placeholder='titre' required maxlength="30" />
@@ -51,7 +51,7 @@
       </form>
           
           <div class="buttons">
-            <button>Submit</button>
+            <button onclick="onFormSubmit()">Submit</button>
           </div>
           <br><br><br>
           
