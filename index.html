@@ -4,10 +4,12 @@
     <meta charset='UTF-8'>
     <link rel="stylesheet" href="style.css">
     <title>Javascript Library</title>
+    <link rel="shortcut icon" href="#">
+
   </head>
   <body>
     <main class='container'>
-      <form onsubmit="event.preventDefault();" class="form">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
         <div class="input1">
         <label id="first">Titre
          <input type='text' name='titre' id='titre' placeholder='titre' required maxlength="30" />
@@ -51,7 +53,7 @@
       </form>
           
           <div class="buttons">
-            <button onclick="onFormSubmit()">Submit</button>
+            <input type="submit" value="Submit">
           </div>
           <br><br><br>
           
