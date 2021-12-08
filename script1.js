@@ -1,6 +1,6 @@
 var selectedRow = null
-function onFormSubmit() {
 
+function onFormSubmit() {
     if (validate()) {
         var formData = readFormData();
         if (selectedRow == null)
@@ -10,9 +10,6 @@ function onFormSubmit() {
         resetForm();
     }
 }
-    
-     
-
 
 
 
