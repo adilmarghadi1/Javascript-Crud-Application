@@ -23,11 +23,9 @@ function readFormData() {
     formData["prix"] = document.getElementById("prix").value;
     formData["langue"] = document.getElementById("langue").value;
     formData["date"] = document.getElementById("date").value;
-    
    
 
-    formData['roman']= document.querySelector('input[name="fav"]:checked').value
-
+    formData['input2']= document.querySelector('input[name="fav"]:checked').value
 
 if ((titre.value>='A' && titre.value<='Z') ||  (titre.value>='a' && titre.value<='z'))
     {
@@ -79,7 +77,7 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.langue;
     cell5 = newRow.insertCell(4);
-  cell5.innerHTML = data.roman;
+  cell5.innerHTML = data.input2;
   cell6 = newRow.insertCell(5);
   cell6.innerHTML = data.date;
     cell7 = newRow.insertCell(6);
@@ -92,7 +90,7 @@ function resetForm() {
     document.getElementById("auteur").value = "";
     document.getElementById("prix").value = "";
     document.getElementById("langue").value = "";
-    document.getElementById("roman").value = "";
+    document.getElementById("input2").value = "";
     document.getElementById("date").value = "";
  
     selectedRow = null;
@@ -104,7 +102,7 @@ function onEdit(td) {
     document.getElementById("auteur").value = selectedRow.cells[1].innerHTML;
     document.getElementById("prix").value = selectedRow.cells[2].innerHTML;
     document.getElementById("langue").value = selectedRow.cells[3].innerHTML;
-    document.getElementById("roman").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("input2").value = selectedRow.cells[4].innerHTML;
     document.getElementById("date").value = selectedRow.cells[5].innerHTML;
 }
 function updateRecord(formData) {
@@ -112,7 +110,7 @@ function updateRecord(formData) {
     selectedRow.cells[1].innerHTML = formData.auteur;
     selectedRow.cells[2].innerHTML = formData.prix;
     selectedRow.cells[3].innerHTML = formData.langue;
-    selectedRow.cells[4].innerHTML = formData.roman;
+    selectedRow.cells[4].innerHTML = formData.input2;
     selectedRow.cells[5].innerHTML = formData.date;
  
 }
