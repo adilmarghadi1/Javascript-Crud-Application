@@ -82,7 +82,7 @@ function insertNewRecord(data) {
   cell6.innerHTML = data.date;
     cell7 = newRow.insertCell(6);
     cell7.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="nDelete(this)">Delete</a>`;
+                       <a onClick="onDelete(this)">Delete</a>`;
 }o
 
 function resetForm() {
