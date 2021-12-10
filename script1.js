@@ -1,14 +1,14 @@
 var selectedRow = null
 
 function onFormSubmit() {
-    if (validate()) {
+    
         var formData = readFormData();
         if (selectedRow == null)
             insertNewRecord(formData);
         else
             updateRecord(formData);
         resetForm();
-    }
+    
 }
 
 
@@ -82,8 +82,8 @@ function insertNewRecord(data) {
   cell6.innerHTML = data.date;
     cell7 = newRow.insertCell(6);
     cell7.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                       <a onClick="onDelete(this)">Delete</a>`;
-}
+                       <a onClick="nDelete(this)">Delete</a>`;
+}o
 
 function resetForm() {
     document.getElementById("titre").value = "";
@@ -122,18 +122,8 @@ function onDelete(td) {
         resetForm();
     }
 }
-function validate() {
-    isValid = true;
-    if (document.getElementById("titre").value == "") {
-        isValid = false;
-        document.getElementById("first").classList.remove("hide");
-    } else {
-        isValid = true;
-        if(!document.getElementById("first").classList.contains("hide"))
-            document.getElementById("first").classList.add("hide");
-    }
-    return isValid;
-} 
+
+
 
 let submit1 = document.getElementById('submit1')
 submit1.addEventListener("click", onFormSubmit);
